@@ -1,0 +1,403 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Editorial Merchant | Curated Collections</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "primary": "#004253",
+              "tertiary": "#5c3200",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#0e1e24",
+              "on-secondary-container": "#57676f",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#693c08",
+              "tertiary-fixed-dim": "#fcb97c",
+              "on-secondary-fixed-variant": "#394951",
+              "on-tertiary-fixed": "#2d1600",
+              "on-surface-variant": "#40484c",
+              "primary-container": "#005b71",
+              "on-primary-fixed": "#001f28",
+              "on-primary-fixed-variant": "#004e61",
+              "surface-container": "#edeeef",
+              "tertiary-container": "#784815",
+              "surface-container-high": "#e7e8e9",
+              "on-primary-container": "#8ed1ea",
+              "background": "#f8f9fa",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-dim": "#d9dadb",
+              "inverse-primary": "#8dd0e9",
+              "surface-bright": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffdcc0",
+              "secondary-container": "#d4e5ef",
+              "on-background": "#191c1d",
+              "on-tertiary-container": "#fdba7d",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#b7eaff",
+              "outline": "#70787d",
+              "secondary-fixed-dim": "#b8c9d2",
+              "primary-fixed-dim": "#8dd0e9",
+              "surface-tint": "#19667d",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#d4e5ef",
+              "secondary": "#516169",
+              "surface": "#f8f9fa",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "outline-variant": "#bfc8cc",
+              "surface-container-low": "#f3f4f5",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .product-card:hover .cart-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none font-plus-jakarta-sans tracking-tight text-on-surface flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-teal-900 dark:text-teal-100">
+            The Editorial Merchant
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-teal-900 dark:text-teal-100 font-semibold border-b-2 border-teal-800 dark:border-teal-400 pb-1" href="#">Categories</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-800 transition-colors" href="#">Deals</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-800 transition-colors" href="#">New Arrivals</a>
+</div>
+<div class="flex items-center space-x-6"><div class="hidden lg:flex items-center bg-surface-container-low rounded-full px-4 py-2"><span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span><input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Search curated goods..." type="text"></div><button class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90" title="Wishlist"><span class="material-symbols-outlined" data-icon="favorite">favorite</span></button><button class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90" title="Cart"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></button><div class="flex items-center space-x-2 pl-2 border-l border-outline-variant/20"><a href="#" class="text-xs font-semibold text-primary hover:text-teal-800 px-2 py-1 transition-colors">Sign In</a><a href="#" class="text-xs font-semibold bg-primary text-white px-3 py-1.5 rounded-full hover:bg-teal-900 transition-colors shadow-sm">Sign Up</a><a href="#" class="text-xs font-medium text-slate-500 hover:text-error px-2 py-1 transition-colors" title="Sign Out">Sign Out</a></div></div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Breadcrumbs -->
+<div class="max-w-7xl mx-auto px-8 py-6">
+<nav class="flex items-center space-x-2 text-sm text-on-secondary-container">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Lifestyle</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-semibold text-on-surface">Premium Living</span>
+</nav>
+<h1 class="mt-4 font-headline text-4xl font-extrabold tracking-tighter text-primary">Curated Living Spaces</h1>
+<p class="mt-2 text-on-surface-variant max-w-xl">Objects of utility and beauty, hand-selected to elevate your everyday environment.</p>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
+<!-- Filters Sidebar -->
+<aside class="lg:col-span-3 space-y-10">
+<!-- Sorting (Mobile Hidden, but functional here) -->
+<div class="lg:hidden mb-8">
+<label class="block text-sm font-bold tracking-wider uppercase text-on-surface-variant mb-3">Sort By</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/20">
+<option>Popularity</option>
+<option>Price (Low-High)</option>
+<option>Price (High-Low)</option>
+<option>Newest</option>
+</select>
+</div>
+<!-- Category -->
+<div>
+<h3 class="font-headline font-bold text-lg mb-4">Category</h3>
+<ul class="space-y-3">
+<li class="flex items-center justify-between text-on-surface-variant hover:text-primary transition-colors cursor-pointer group">
+<span class="text-sm">Minimalist Furniture</span>
+<span class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full">12</span>
+</li>
+<li class="flex items-center justify-between text-primary font-semibold transition-colors cursor-pointer group">
+<span class="text-sm">Artisanal Decor</span>
+<span class="text-xs bg-primary text-white px-2 py-0.5 rounded-full">24</span>
+</li>
+<li class="flex items-center justify-between text-on-surface-variant hover:text-primary transition-colors cursor-pointer group">
+<span class="text-sm">Soft Textiles</span>
+<span class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full">8</span>
+</li>
+</ul>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="font-headline font-bold text-lg mb-4">Price Range</h3>
+<div class="relative pt-2">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range">
+<div class="flex justify-between mt-3 text-sm text-on-surface-variant">
+<span class="">$50</span>
+<span class="">$2,500</span>
+</div>
+</div>
+</div>
+<!-- Color -->
+<div>
+<h3 class="font-headline font-bold text-lg mb-4">Color Palette</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-neutral-100 ring-2 ring-offset-2 ring-primary"></button>
+<button class="w-8 h-8 rounded-full bg-stone-500 hover:ring-2 ring-offset-2 ring-primary transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-teal-900 hover:ring-2 ring-offset-2 ring-primary transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-amber-100 hover:ring-2 ring-offset-2 ring-primary transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-slate-400 hover:ring-2 ring-offset-2 ring-primary transition-all"></button>
+</div>
+</div>
+<!-- Size -->
+<div>
+<h3 class="font-headline font-bold text-lg mb-4">Size</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/20 text-xs font-semibold hover:bg-primary hover:text-white transition-all">Small</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold shadow-sm">Medium</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant/20 text-xs font-semibold hover:bg-primary hover:text-white transition-all">Large</button>
+</div>
+</div>
+<!-- Rating -->
+<div>
+<h3 class="font-headline font-bold text-lg mb-4">Rating</h3>
+<div class="space-y-2">
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-checkbox text-primary rounded-sm border-outline-variant focus:ring-primary" type="checkbox">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-xs text-on-surface-variant">&amp; up</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="lg:col-span-9">
+<!-- Top Toolbar -->
+<div class="hidden lg:flex justify-between items-center mb-10 pb-4 border-b border-outline-variant/10">
+<span class="text-sm font-medium text-on-surface-variant">Showing 1–12 of 24 results</span>
+<div class="flex items-center space-x-4">
+<span class="text-sm font-semibold text-primary">Sort By:</span>
+<select class="bg-transparent border-none text-sm font-bold focus:ring-0 cursor-pointer">
+<option>Popularity</option>
+<option>Price (Low to High)</option>
+<option>Price (High to Low)</option>
+<option>Newest Release</option>
+</select>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low mb-6 transition-all duration-500">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist white ceramic vase with single dried branch on concrete background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcI5vlusy2EMbtKMo7hjtq_rsgRRi9UheA2KfmWm8C16F8iYuM540c5OHT1CPfhHdtLvSERJTO73HXGwC6yeDKmO_mu5ihHKKIL0HCSwRMntspsfLLWjFVd8-kjZ4KbGHsAqzKOhV_JmKAjOhNsWcGPh0LBxb-Jrp6JN2Zd7kmRHdqutulWdewKQlB1A5RV7BMz_FMK2NVQHA14brydhBrq2WnvJ9c1C2gAE63aLBkLFJgz9T0U4mZBmj5Nduzz2Dgm8DoQAFAu8E2">
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-primary transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="cart-overlay absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 rounded-lg font-headline font-bold text-sm tracking-tight flex items-center justify-center space-x-2 shadow-xl">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+<div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">New Collection</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-lg text-on-surface tracking-tight group-hover:text-primary transition-colors">Artisanal Glazed Pitcher</h3>
+<div class="flex items-center space-x-1 text-xs text-amber-600 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">4.9</span>
+</div>
+</div>
+<p class="text-xs text-on-secondary-container font-medium uppercase tracking-widest">Natural Ceramics</p>
+<div class="pt-2 flex items-baseline space-x-3">
+<span class="text-xl font-headline font-extrabold text-primary">$185.00</span>
+<span class="text-sm text-outline line-through">$220.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low mb-6 transition-all duration-500">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="architectural mid-century modern wooden chair in a sun-drenched loft studio with minimal furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi3_icVgW6pyYZQ97YyQ_juFxIcwClcXw0ohKlc9sT38pF5hOrGx3pIjR0etLfIIkCSuLzhwaqXPHuyi6AtDcvyBAKYeo7XwX02GFAAFB6DlGfYErwHC0iyqX-vrg-JD8jMf8Sm2poP9Q_-0Byu0grNK6qfWZIhWHFQ-KJn-03ohVnsbMQQMcVquKs5nCroSz8m_ENjuqL1O48BGGue2AaqqypUylRIcKbyj-HrirH0UxQNPUOvHEo_xZlMBRw00YYyXV8N12Uhuz1">
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-primary transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="cart-overlay absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 rounded-lg font-headline font-bold text-sm tracking-tight flex items-center justify-center space-x-2 shadow-xl">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-lg text-on-surface tracking-tight group-hover:text-primary transition-colors">Oak Sculptural Seat</h3>
+<div class="flex items-center space-x-1 text-xs text-amber-600 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">4.8</span>
+</div>
+</div>
+<p class="text-xs text-on-secondary-container font-medium uppercase tracking-widest">Handcrafted Furniture</p>
+<div class="pt-2 flex items-baseline space-x-3">
+<span class="text-xl font-headline font-extrabold text-primary">$1,250.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low mb-6 transition-all duration-500">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxurious beige cashmere throw blanket draped elegantly over a charcoal grey sofa, cinematic soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0AgrxxLBZYfESNiw_W3EK8JnlFpdH5EPXdWzKOjk20tSn1gX7X58LiPW486K_-5_nOjtRVIlkCqDR3v59tu4xNXwe1PZuwBYnUtM18cVG4NSgWhF0BhRkbuBSKOeFVdZW8Yq-KUMOzOn6ELaOa2R63h5IacL3E8X9HFOcGhZT7AXAiCuZHadwYTTNQSiX7u3aPmCH1KJaPlTgACEdysmRYscjq62wK3sWo3IrMj8lh9BEzKymIlfbBcHYBpzIPC5ADIe72e3PnLfG">
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-primary transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="cart-overlay absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 rounded-lg font-headline font-bold text-sm tracking-tight flex items-center justify-center space-x-2 shadow-xl">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+<div class="absolute top-4 left-4 bg-error text-white px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Sale 20% Off</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-lg text-on-surface tracking-tight group-hover:text-primary transition-colors">Raw Silk Throw</h3>
+<div class="flex items-center space-x-1 text-xs text-amber-600 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">5.0</span>
+</div>
+</div>
+<p class="text-xs text-on-secondary-container font-medium uppercase tracking-widest">Organic Textiles</p>
+<div class="pt-2 flex items-baseline space-x-3">
+<span class="text-xl font-headline font-extrabold text-primary">$340.00</span>
+<span class="text-sm text-outline line-through">$425.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 (Bento-ish larger card for variety) -->
+<div class="product-card group cursor-pointer lg:col-span-2">
+<div class="relative aspect-[16/9] overflow-hidden rounded-xl bg-surface-container-low mb-6 transition-all duration-500">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="spacious bright home library with built-in shelves and a reading nook overlooking a garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBirBg844CvAgT7FKjoiaGvXfjhzMwde_LpBgmRabYn1cl-915l5Sk4Fr0d0osSCJrgabQkgUaHHt5Rvj8OrLu-T4-X2SlaXf-ffvl9rUltrc_MPj3us44qtBomAO9qjrmK87fQVrg6BZBQ4s7LVb8iC4m6ryRHncFvciaQNE1igK742Nug09DV8F_WeHHz5s2H_WS5LaPAd02zm-onvg33IWyx5QkjgUd_IJyPXMhZpHA84o-DS55d9tzxB34_UFXOXq5Ad60BNmnd">
+<button class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-primary transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+<div class="absolute bottom-6 left-6 max-w-sm">
+<p class="text-white bg-primary px-3 py-1 inline-block text-[10px] font-bold tracking-widest uppercase mb-2">Editorial Selection</p>
+<h3 class="text-2xl font-headline font-extrabold text-white drop-shadow-md">The Archive Bookshelf System</h3>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xs text-on-secondary-container font-medium uppercase tracking-widest">Modular Storage</p>
+<div class="pt-1 flex items-baseline space-x-3">
+<span class="text-xl font-headline font-extrabold text-primary">$2,850.00</span>
+</div>
+</div>
+<button class="bg-primary-container text-white px-6 py-3 rounded-lg font-headline font-bold text-sm">Inquire for Custom Fit</button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low mb-6 transition-all duration-500">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="contemporary brass floor lamp with sleek geometric lines standing next to a velvet armchair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmlbrF03E9VQp1LHDHqABr3Dbnc8LsMiCDMHjetCZmfG4q66_uAXIkGoUgtNISdIs8AhYdsLl83W4AMzD6UI0CzN4-MTSxQVkf73_rjADe6zGjQn6-S9zeZtoOmn5gzusgiyrjalAxK3NUp6FWTg_7mdtVSwvfKYGTPjFd8bCexI8kmeibJQpaeLalq_930VUzdXRlimvFzWBc7u7ulHELUYv_rp-r9ltz7SoD6UOo41APMlru5LUPsBdmP5o4t2QDNegz-NMyeQSX">
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-primary transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="cart-overlay absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 transition-all duration-300">
+<button class="w-full bg-primary text-white py-3 rounded-lg font-headline font-bold text-sm tracking-tight flex items-center justify-center space-x-2 shadow-xl">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-lg text-on-surface tracking-tight group-hover:text-primary transition-colors">Brass Horizon Lamp</h3>
+<div class="flex items-center space-x-1 text-xs text-amber-600 font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">4.7</span>
+</div>
+</div>
+<p class="text-xs text-on-secondary-container font-medium uppercase tracking-widest">Architectural Lighting</p>
+<div class="pt-2 flex items-baseline space-x-3">
+<span class="text-xl font-headline font-extrabold text-primary">$495.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More / Pagination -->
+<div class="mt-24 flex flex-col items-center">
+<button class="px-10 py-4 bg-surface-container-low text-primary rounded-full font-headline font-bold tracking-tight hover:bg-primary hover:text-white transition-all duration-300 mb-6">
+                        Explore More Essentials
+                    </button>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-bold text-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high text-on-surface-variant font-bold text-sm transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high text-on-surface-variant font-bold text-sm transition-colors">3</button>
+<span class="text-outline-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high text-on-surface-variant font-bold text-sm transition-colors">8</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full mt-20 bg-slate-50 dark:bg-slate-950 font-inter text-sm tracking-normal text-slate-600 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-bold text-teal-900 dark:text-teal-100">The Editorial Merchant</div>
+<p class="leading-relaxed">Curation as a service. We source only the most exceptional items for the modern lifestyle, ensuring quality and ethics in every piece.</p>
+<div class="flex space-x-4">
+<a class="opacity-80 hover:opacity-100 transition-transform duration-200 hover:translate-y-[-2px]" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="opacity-80 hover:opacity-100 transition-transform duration-200 hover:translate-y-[-2px]" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-teal-900 dark:text-teal-500 uppercase tracking-widest text-xs">Curated Links</h4>
+<nav class="flex flex-col space-y-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200" href="#">About</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200" href="#">The Journal</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-teal-900 dark:text-teal-500 uppercase tracking-widest text-xs">Assistance</h4>
+<nav class="flex flex-col space-y-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200" href="#">Privacy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200" href="#">Terms</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200" href="#">Shipping</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-teal-900 dark:text-teal-500 uppercase tracking-widest text-xs">Newsletter</h4>
+<p class="text-xs leading-relaxed">Join our weekly digest of culture, design, and exclusive collection previews.</p>
+<div class="flex border-b border-teal-900/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="Email address" type="email">
+<button class="material-symbols-outlined text-teal-900">east</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-outline-variant/10 text-center md:text-left">
+<p class="opacity-80 text-xs">© 2024 The Editorial Merchant. All rights reserved.</p>
+</div>
+</footer>
+
+
+</body></html>

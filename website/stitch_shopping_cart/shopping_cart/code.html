@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Cart | The Editorial Merchant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-surface": "#2e3132",
+                        "primary": "#004253",
+                        "tertiary": "#5c3200",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#0e1e24",
+                        "on-secondary-container": "#57676f",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#693c08",
+                        "tertiary-fixed-dim": "#fcb97c",
+                        "on-secondary-fixed-variant": "#394951",
+                        "on-tertiary-fixed": "#2d1600",
+                        "on-surface-variant": "#40484c",
+                        "primary-container": "#005b71",
+                        "on-primary-fixed": "#001f28",
+                        "on-primary-fixed-variant": "#004e61",
+                        "surface-container": "#edeeef",
+                        "tertiary-container": "#784815",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-container": "#8ed1ea",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-dim": "#d9dadb",
+                        "inverse-primary": "#8dd0e9",
+                        "surface-bright": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdcc0",
+                        "secondary-container": "#d4e5ef",
+                        "on-background": "#191c1d",
+                        "on-tertiary-container": "#fdba7d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#b7eaff",
+                        "outline": "#70787d",
+                        "secondary-fixed-dim": "#b8c9d2",
+                        "primary-fixed-dim": "#8dd0e9",
+                        "surface-tint": "#19667d",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d4e5ef",
+                        "secondary": "#516169",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bfc8cc",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #004253 0%, #005b71 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-teal-900 dark:text-teal-100 font-headline">The Editorial Merchant</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-800 transition-colors font-label" href="#">Categories</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-800 transition-colors font-label" href="#">Deals</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-800 transition-colors font-label" href="#">New Arrivals</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm ml-2 w-48 font-label" placeholder="Search curated items..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800/50 p-2 rounded-full transition-all duration-300 active:scale-90">
+<span class="material-symbols-outlined text-teal-900 dark:text-teal-500">favorite</span>
+</button>
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800/50 p-2 rounded-full transition-all duration-300 active:scale-90 relative">
+<span class="material-symbols-outlined text-teal-900 dark:text-teal-500">shopping_bag</span>
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800/50 p-2 rounded-full transition-all duration-300 active:scale-90">
+<span class="material-symbols-outlined text-teal-900 dark:text-teal-500">person</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="text-5xl font-extrabold font-headline tracking-tight text-on-surface mb-4">Your Shopping Bag</h1>
+<div class="flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">arrow_back</span>
+<a class="font-label" href="#">Continue Shopping</a>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Cart Items List -->
+<section class="lg:col-span-8 space-y-8">
+<!-- Free Shipping Progress -->
+<div class="bg-surface-container-low p-6 rounded-xl">
+<div class="flex justify-between items-end mb-3">
+<p class="text-on-surface font-medium font-label">You're <span class="text-primary font-bold">$42.00</span> away from free shipping</p>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[70%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="group flex flex-col md:flex-row gap-8 pb-8 border-b border-outline-variant/20">
+<div class="w-full md:w-40 h-48 bg-surface-container-low rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Premium minimalist tailored wool coat in charcoal grey hanging against a soft white gallery wall with warm side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJjS0rGpvXVZtxeYmRAXUFeON-5AFtlJ0kyS9SKSmZU3tjQJE9txYpQJ7uP4VFOXJ1yCMW9t4J1wVi_AFAg-tEP0X2cF96Iwe3H3NJZApGLfshdv-W2l9umPvrkM1kAhPjyIpePHihS3DG9crCLCDu9VaOJJtmCA7Uk1bCZkbDCKXxlxJS2IIOn7d_VI6NwyDpreMUKn6pjKztogX27IgW-8Zsc9dF41i1Dcowdym8dz43MLfuteId2mfDxg_aPqq_M8CqQ5zcTdqX"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-1">Modern Tailored Overcoat</h3>
+<p class="text-on-surface-variant font-label text-sm mb-4">Color: Charcoal Grey • Size: L</p>
+<div class="flex items-center gap-4 bg-surface-container-low w-fit px-3 py-1 rounded-full">
+<button class="text-primary hover:scale-110 transition-transform"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="font-bold text-sm w-4 text-center">1</span>
+<button class="text-primary hover:scale-110 transition-transform"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xl font-bold font-headline text-on-surface">$248.00</p>
+<p class="text-on-surface-variant text-xs line-through">$310.00</p>
+</div>
+</div>
+<div class="flex justify-end mt-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-error transition-colors text-xs font-label">
+<span class="material-symbols-outlined text-lg">delete</span>
+                                    Remove
+                                </button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex flex-col md:flex-row gap-8 pb-8 border-b border-outline-variant/20">
+<div class="w-full md:w-40 h-48 bg-surface-container-low rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek silver minimalist wristwatch with a white dial and tan leather strap on a textured stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiLgapN63Jq3gT9Rikz-MEr1dartaMHVpIxAkp2ASbXY9HhbSiU7iCee040x9s1LWjnDBdixUfV2gPgelpjs3GpMbKiSdHIiizn21n1mj4BLglfHSS05aTmxxhJ884B5NQ_cn3hZwZMbrufxSHijNdnPo9dex1_nveHDPGYH3HxgIlLD2dnR3HLV9SwEUBVR-3kyY1kLwMpB2KtjkplKKNdrEmUCtGzcnowp-6wUMFPegePVK8aLEM1O32IKpczfcge4oAHTnOI3mf"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-1">Architect Series Watch</h3>
+<p class="text-on-surface-variant font-label text-sm mb-4">Edition: Silver/Tan Leather</p>
+<div class="flex items-center gap-4 bg-surface-container-low w-fit px-3 py-1 rounded-full">
+<button class="text-primary hover:scale-110 transition-transform"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="font-bold text-sm w-4 text-center">1</span>
+<button class="text-primary hover:scale-110 transition-transform"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xl font-bold font-headline text-on-surface">$195.00</p>
+</div>
+</div>
+<div class="flex justify-end mt-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-error transition-colors text-xs font-label">
+<span class="material-symbols-outlined text-lg">delete</span>
+                                    Remove
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Summary Sidebar -->
+<aside class="lg:col-span-4 sticky top-32">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] space-y-8">
+<h2 class="text-2xl font-bold font-headline tracking-tight text-on-surface border-b border-outline-variant/10 pb-4">Order Summary</h2>
+<div class="space-y-4">
+<div class="flex justify-between text-on-surface-variant font-label">
+<span>Subtotal</span>
+<span class="text-on-surface font-semibold">$443.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label">
+<span>Shipping</span>
+<span class="text-on-surface font-semibold">$15.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label">
+<span>Estimated Tax</span>
+<span class="text-on-surface font-semibold">$35.44</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/10 flex justify-between items-end">
+<span class="text-lg font-bold font-headline">Grand Total</span>
+<span class="text-3xl font-extrabold font-headline text-primary tracking-tighter">$493.44</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Coupon Code</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-surface-container-low border-b-2 border-outline-variant/20 focus:border-primary focus:ring-0 transition-all font-label px-4 py-2 rounded-t-lg" placeholder="Enter code" type="text"/>
+<button class="bg-secondary text-white px-6 py-2 rounded-lg font-bold hover:bg-on-secondary-fixed transition-colors text-sm">Apply</button>
+</div>
+</div>
+<button class="editorial-gradient w-full py-5 rounded-full text-white font-bold font-headline text-lg shadow-lg hover:shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                        Proceed to Checkout
+                    </button>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Secure Checkout</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Buyer Protection</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">sync</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">30-Day Returns</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-slate-50 dark:bg-slate-950 font-inter text-sm tracking-normal text-slate-600">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-teal-900 dark:text-teal-100 font-headline">The Editorial Merchant</div>
+<p class="opacity-80 leading-relaxed">Curating timeless pieces for the modern home and wardrobe. Quality over quantity, always.</p>
+</div>
+<div>
+<h4 class="font-bold text-teal-900 dark:text-teal-100 mb-6 uppercase tracking-widest text-xs">Customer Service</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-all duration-200 inline-block" href="#">Shipping Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-all duration-200 inline-block" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-all duration-200 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-teal-900 dark:text-teal-100 mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-all duration-200 inline-block" href="#">About</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-all duration-200 inline-block" href="#">Privacy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-teal-700 hover:translate-x-1 transition-all duration-200 inline-block" href="#">Terms</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-teal-900 dark:text-teal-100 uppercase tracking-widest text-xs">Newsletter</h4>
+<p class="text-xs opacity-80">Join our mailing list for exclusive editorial insights.</p>
+<div class="flex border-b border-outline-variant/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="email@address.com" type="email"/>
+<button class="material-symbols-outlined text-teal-900 dark:text-teal-500">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-outline-variant/10 text-center opacity-60 text-xs">
+            © 2024 The Editorial Merchant. All rights reserved.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#394951", "on-primary-container": "#8ed1ea", "on-error": "#ffffff", "secondary": "#516169", "surface-container-high": "#e7e8e9", "tertiary": "#5c3200", "inverse-primary": "#8dd0e9", "inverse-surface": "#2e3132", "surface-container-low": "#f3f4f5", "on-tertiary-fixed-variant": "#693c08", "secondary-fixed-dim": "#b8c9d2", "error": "#ba1a1a", "on-tertiary-fixed": "#2d1600", "on-primary-fixed": "#001f28", "on-error-container": "#93000a", "tertiary-container": "#784815", "surface-dim": "#d9dadb", "primary-fixed": "#b7eaff", "surface": "#f8f9fa", "on-surface-variant": "#40484c", "surface-bright": "#f8f9fa", "on-surface": "#191c1d", "outline-variant": "#bfc8cc", "primary-fixed-dim": "#8dd0e9", "surface-variant": "#e1e3e4", "on-primary-fixed-variant": "#004e61", "on-secondary-container": "#57676f", "error-container": "#ffdad6", "surface-container": "#edeeef", "inverse-on-surface": "#f0f1f2", "secondary-container": "#d4e5ef", "on-background": "#191c1d", "background": "#f8f9fa", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc0", "on-tertiary-container": "#fdba7d", "tertiary-fixed-dim": "#fcb97c", "secondary-fixed": "#d4e5ef", "surface-container-highest": "#e1e3e4", "primary": "#004253", "surface-tint": "#19667d", "on-secondary-fixed": "#0e1e24", "primary-container": "#005b71", "outline": "#70787d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: {}, fontFamily: { headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"] }, fontSize: {} } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors rounded-full active:bg-surface-container" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="text-base font-headline font-bold tracking-tight text-on-surface">Product Detail</h1></div><div class="flex items-center gap-1"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col flex-grow relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28">
+<!-- Visual Hero / Gallery Stack -->
+<section class="relative w-full bg-surface-container-low overflow-hidden">
+<div class="relative w-full aspect-[3/4] max-h-[500px] overflow-hidden" id="carouselWrapper">
+<div class="flex w-full h-full transition-transform duration-500 ease-out" id="carouselTrack">
+<div class="min-w-full h-full relative">
+<img class="w-full h-full object-cover" data-alt="High fashion editorial photography of a tailored, minimalist sculpted wool overcoat in charcoal grey worn by an elegant model in soft warm studio lighting with architectural shadows, premium material textures visible, cinematic high-end look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8O1eP56X5Pa4CvjVpUr8eO1qHLSAFC91Sx38dNjEbobUcjXK9aQR1q-q6SC9jVMx1j9T0LJMSllXVMtIrs35n-0jCpxFS3i2l8_MLg5qkD1KZjpDqCoyYONrLZlIyBVANkSRfW8KvC0xHcSSw0PST3D2REdnstYUNrhGW1ysDf1wRWhjRR_L5Kx4JhQobS7t4THszdNOUdn-73L0DoHuaRy_G80Kg2cbDZ8KXmQLykbDL-t5KJ4Ldvg"/>
+</div>
+<div class="min-w-full h-full relative">
+<img class="w-full h-full object-cover" data-alt="Macro close-up editorial shot highlighting the double-faced melton wool texture, handcrafted horn buttons, and refined lapel stitching of a luxury tailored overcoat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDduwZG2tk-5U2N0Z9_hKqEqlHfEUdyPKcBtMLV-Hv5KU7PWywgMnEK8WR8alhf2YKcVTPxELKtZyztG84-l6h5fgBaNViUGEEcWvfLrula_MuF5T8kREi5pfcdkkKhLQua5uo2gH7PkZQnuDA5WhgajcN5JeQ4tQVKB3Rdykz3lJFuExbwOsyWa9fVtva5bBp7QgVTsunNpM7fCOZVNZkGBd5UGUeg_aZGjPp9v1UJyAeIqXubdmNC0A"/>
+</div>
+<div class="min-w-full h-full relative">
+<img class="w-full h-full object-cover" data-alt="Full-length model dynamic walking pose wearing the luxury wool overcoat draped effortlessly, soft neutral gallery interior backdrop, high fashion magazine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKO8V__xp2QPa5DOBES7W7m7aDW8PN7Fi491AYAh3ME6KLQJp5W01y6LeD3vbZzKZh1GdzL2blWNq6r5uUgJGQpIfImzwefM5rjywbRdJ0Vjpd_mAaajKKUz6KpYuISV3cjremxTuSGcB5JSdHDtY2ZSFvB0bbDkpDjW8vqUEqzfdnwYEThfjKPZbje1qwX-9OcV8M2E9UabpcrTNB5_44YdTI8sSwm5cwvbM-7jJGG3IRUsAmzn48w"/>
+</div>
+<div class="min-w-full h-full relative">
+<img class="w-full h-full object-cover" data-alt="Back perspective detail showing the sculpted ergonomic back vent and graceful fluid drape of a structured wool winter coat in quiet luxury palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDErnLRuq24yVImP8iJS2I-GaOZGaZgash6hiuxQE0pYjO084n-GzdwgDJUJWp1rTBr4_PcSIkqdWLDD-t5fEwd-MOkUquy9I1xTarSYSbj8VJKYPzT9wSlYSBCSo3QWtY6dCVAFJQF7f1tXB5sj7c_RH1rcnov9cJdDHuf06grufhE9HQKKpPyTWKhivLd0Ib_BcMzKnJXdI7Nac23QGHu6obrdxomlDu9v2dFKcQDtbgNyo8tsmhHxA"/>
+</div>
+</div>
+<!-- Floating Controls: Zoom & Wishlist/Delight -->
+<div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+<button aria-label="Zoom image" class="w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-95 transition-transform" id="zoomBtn">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<button aria-label="Save to favorites" class="w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-90 transition-transform" id="wishlistBtn">
+<span class="material-symbols-outlined text-[20px] transition-colors" id="wishlistIcon">favorite</span>
+</button>
+</div>
+<!-- Editorial Badges -->
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-label font-semibold tracking-wider uppercase bg-primary-container text-on-primary shadow-sm backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container animate-pulse"></span>
+          Limited Edition
+        </span>
+</div>
+<!-- Carousel Progress Dots -->
+<div class="absolute bottom-4 inset-x-0 flex justify-center items-center gap-1.5 z-10">
+<button aria-label="Slide 1" class="carousel-dot h-1.5 rounded-full transition-all duration-300 w-6 bg-primary" onclick="goToSlide(0)"></button>
+<button aria-label="Slide 2" class="carousel-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-on-surface-variant/40" onclick="goToSlide(1)"></button>
+<button aria-label="Slide 3" class="carousel-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-on-surface-variant/40" onclick="goToSlide(2)"></button>
+<button aria-label="Slide 4" class="carousel-dot h-1.5 rounded-full transition-all duration-300 w-2 bg-on-surface-variant/40" onclick="goToSlide(3)"></button>
+</div>
+</div>
+</section>
+<!-- Editorial Product Header & Title Area -->
+<section class="px-5 pt-6 pb-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label uppercase tracking-widest text-secondary font-medium">New Arrival / Winter Collection</span>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-xs font-label">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-semibold text-on-surface">4.8</span>
+<span class="text-secondary">(124)</span>
+</div>
+</div>
+<h2 class="text-2xl font-headline font-bold tracking-tight text-on-surface leading-tight">
+      Signature Sculpted Wool Overcoat
+    </h2>
+<!-- Price Block -->
+<div class="flex items-baseline gap-3 pt-1">
+<span class="text-2xl font-headline font-extrabold text-primary">$495.00</span>
+<span class="text-sm font-label line-through text-secondary-fixed-variant">$620.00</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold tracking-wide uppercase">
+        Save 20%
+      </span>
+</div>
+</section>
+<!-- Curator's Note Delight Card -->
+<section class="px-5 py-2">
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0">auto_awesome</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+<strong class="font-semibold text-on-surface">Curator's Note:</strong> Precision-tailored with high-gauge melton virgin wool. Designed with dropped raglan shoulders for an effortless, confident silhouette over chunky knitwear.
+      </p>
+</div>
+</section>
+<!-- Product Selectors: Color & Size -->
+<section class="px-5 pt-4 pb-6 flex flex-col gap-6">
+<!-- Color Swatches -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label tracking-wider uppercase text-secondary font-medium">
+          Color: <span class="font-semibold text-on-surface" id="selectedColorName">Charcoal Grey</span>
+</span>
+<span class="text-xs font-label text-secondary">4 shades</span>
+</div>
+<div class="flex items-center gap-3">
+<!-- Charcoal Grey (Active) -->
+<button aria-label="Charcoal Grey" class="color-swatch relative w-9 h-9 rounded-full flex items-center justify-center p-0.5 transition-transform active:scale-95" onclick="selectColor(this, 'Charcoal Grey')">
+<span class="w-full h-full rounded-full bg-[#34373a] shadow-inner"></span>
+<span class="swatch-indicator absolute inset-0 rounded-full shadow-[0_0_0_2px_#004253] scale-110 pointer-events-none"></span>
+</button>
+<!-- Navy -->
+<button aria-label="Midnight Navy" class="color-swatch relative w-9 h-9 rounded-full flex items-center justify-center p-0.5 transition-transform active:scale-95" onclick="selectColor(this, 'Midnight Navy')">
+<span class="w-full h-full rounded-full bg-[#1b2533] shadow-inner"></span>
+<span class="swatch-indicator hidden absolute inset-0 rounded-full shadow-[0_0_0_2px_#004253] scale-110 pointer-events-none"></span>
+</button>
+<!-- Espresso -->
+<button aria-label="Deep Espresso" class="color-swatch relative w-9 h-9 rounded-full flex items-center justify-center p-0.5 transition-transform active:scale-95" onclick="selectColor(this, 'Deep Espresso')">
+<span class="w-full h-full rounded-full bg-[#3a2c27] shadow-inner"></span>
+<span class="swatch-indicator hidden absolute inset-0 rounded-full shadow-[0_0_0_2px_#004253] scale-110 pointer-events-none"></span>
+</button>
+<!-- Cream -->
+<button aria-label="Oatmeal Cream" class="color-swatch relative w-9 h-9 rounded-full flex items-center justify-center p-0.5 transition-transform active:scale-95" onclick="selectColor(this, 'Oatmeal Cream')">
+<span class="w-full h-full rounded-full bg-[#e8e2d7] shadow-inner"></span>
+<span class="swatch-indicator hidden absolute inset-0 rounded-full shadow-[0_0_0_2px_#004253] scale-110 pointer-events-none"></span>
+</button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label tracking-wider uppercase text-secondary font-medium">Select Size</span>
+<button class="flex items-center gap-1 text-xs font-label text-primary font-semibold hover:underline" onclick="openSizeGuide()">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+          Size Guide
+        </button>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<button class="size-pill py-3 rounded-xl bg-surface-container-low text-on-surface font-headline font-semibold text-sm transition-all duration-200 active:scale-95 hover:bg-surface-container" onclick="selectSize(this)">
+          XS
+        </button>
+<button class="size-pill py-3 rounded-xl bg-primary text-on-primary font-headline font-semibold text-sm shadow-md transition-all duration-200 active:scale-95" onclick="selectSize(this)">
+          S
+        </button>
+<button class="size-pill py-3 rounded-xl bg-surface-container-low text-on-surface font-headline font-semibold text-sm transition-all duration-200 active:scale-95 hover:bg-surface-container" onclick="selectSize(this)">
+          M
+        </button>
+<button class="size-pill py-3 rounded-xl bg-surface-container-low text-on-surface font-headline font-semibold text-sm transition-all duration-200 active:scale-95 hover:bg-surface-container" onclick="selectSize(this)">
+          L
+        </button>
+</div>
+<p class="text-[11px] text-secondary-fixed-variant pt-0.5">Model is 5'10" (178cm) wearing size S in an oversized fit.</p>
+</div>
+</section>
+<!-- Key Highlights (2x2 Grid) -->
+<section class="px-5 py-4 bg-surface-container-low">
+<h3 class="text-xs font-label uppercase tracking-widest text-secondary font-semibold mb-3.5">Curated Craftsmanship</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Highlight 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">thermostat</span>
+</div>
+<div>
+<h4 class="text-xs font-headline font-bold text-on-surface">Thermal Insulation</h4>
+<p class="text-[11px] text-secondary mt-0.5">580 GSM pure wool keeps comfort down to -5°C.</p>
+</div>
+</div>
+<!-- Highlight 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div>
+<h4 class="text-xs font-headline font-bold text-on-surface">Water Repellent</h4>
+<p class="text-[11px] text-secondary mt-0.5">Naturally shed drizzle and light winter snow.</p>
+</div>
+</div>
+<!-- Highlight 3 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</div>
+<div>
+<h4 class="text-xs font-headline font-bold text-on-surface">Ethical Sourcing</h4>
+<p class="text-[11px] text-secondary mt-0.5">RWS-certified Australian non-mulesed wool.</p>
+</div>
+</div>
+<!-- Highlight 4 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">styler</span>
+</div>
+<div>
+<h4 class="text-xs font-headline font-bold text-on-surface">Tailored Fit</h4>
+<p class="text-[11px] text-secondary mt-0.5">Structured shoulders with subtle soft drape.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Collapsible Accordion Sections -->
+<section class="px-5 py-6 flex flex-col gap-3">
+<!-- Item 1: Description -->
+<div class="rounded-xl bg-surface-container-lowest overflow-hidden transition-all duration-200">
+<button class="w-full px-4 py-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-desc')">
+<span class="text-sm font-headline font-bold text-on-surface">Description</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200 rotate-180" id="acc-desc-icon">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-1 flex flex-col gap-2.5 text-xs text-on-surface-variant leading-relaxed" id="acc-desc">
+<p>
+          The Signature Sculpted Wool Overcoat pairs an assertive architectural collar with soft, relaxed volume throughout the torso. Meticulously double-faced by master artisans, this garment provides unparalleled warmth without unnecessary bulk.
+        </p>
+<p>
+          Finished with deep diagonal welt pockets, genuine horn fastening buttons, and smooth cupra sleeve lining for seamless layering.
+        </p>
+</div>
+</div>
+<!-- Item 2: Specifications -->
+<div class="rounded-xl bg-surface-container-lowest overflow-hidden transition-all duration-200">
+<button class="w-full px-4 py-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-specs')">
+<span class="text-sm font-headline font-bold text-on-surface">Specifications</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200" id="acc-specs-icon">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 flex flex-col gap-2 text-xs text-on-surface-variant" id="acc-specs">
+<div class="flex justify-between py-1.5 bg-surface-container-low px-2.5 rounded-lg">
+<span class="font-medium text-secondary">Shell</span>
+<span class="font-semibold text-on-surface">90% Virgin Wool, 10% Cashmere</span>
+</div>
+<div class="flex justify-between py-1.5 px-2.5">
+<span class="font-medium text-secondary">Lining</span>
+<span class="font-semibold text-on-surface">100% Cupro Bemberg</span>
+</div>
+<div class="flex justify-between py-1.5 bg-surface-container-low px-2.5 rounded-lg">
+<span class="font-medium text-secondary">Closure</span>
+<span class="font-semibold text-on-surface">Real Horn 3-Button Front</span>
+</div>
+<div class="flex justify-between py-1.5 px-2.5">
+<span class="font-medium text-secondary">Care</span>
+<span class="font-semibold text-on-surface">Specialist Dry Clean Only</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Shipping & Returns -->
+<div class="rounded-xl bg-surface-container-lowest overflow-hidden transition-all duration-200">
+<button class="w-full px-4 py-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-ship')">
+<span class="text-sm font-headline font-bold text-on-surface">Shipping &amp; Returns</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200" id="acc-ship-icon">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 flex flex-col gap-2 text-xs text-on-surface-variant leading-relaxed" id="acc-ship">
+<div class="flex items-center gap-2 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>Complimentary Express Shipping on this order</span>
+</div>
+<p class="text-secondary mt-1">
+          Delivered in signature garment bag with bespoke cedar hanger. We provide 30-day hassle-free worldwide returns and prepaid shipping labels.
+        </p>
+</div>
+</div>
+</section>
+<!-- Customer Reviews Preview Snippet -->
+<section class="px-5 py-4 mb-4">
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xs font-headline font-bold text-on-surface mt-1">4.8 out of 5 based on 124 reviews</p>
+</div>
+<button class="text-xs font-label text-primary font-semibold hover:underline">
+          View all
+        </button>
+</div>
+<!-- Featured review quote snippet -->
+<div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-[11px] text-secondary">
+<span class="font-semibold text-on-surface">Eleanor V. • Verified Buyer</span>
+<span>4 days ago</span>
+</div>
+<p class="text-xs text-on-surface-variant italic">
+          "The weight and drape of this coat are remarkable. It feels like wearing an heirloom piece. Worth every single penny."
+        </p>
+</div>
+</div>
+</section>
+<!-- Size Guide Modal Backdrop & Sheet -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-end justify-center" id="sizeGuideModal">
+<div class="w-full max-w-lg bg-surface rounded-t-3xl p-6 flex flex-col gap-4 max-h-[85vh] overflow-y-auto animate-in slide-in-from-bottom duration-300">
+<div class="flex items-center justify-between pb-2">
+<h3 class="text-lg font-headline font-bold text-on-surface">Sculpted Coat Fit Guide</h3>
+<button class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center" onclick="closeSizeGuide()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+        Our coats are intentionally tailored with a relaxed, modern drape. We recommend choosing your normal size for layering, or sizing down for a more form-fitted look.
+      </p>
+<!-- Dimension Table -->
+<div class="flex flex-col gap-1.5 text-xs text-on-surface">
+<div class="grid grid-cols-4 font-semibold text-secondary py-2 bg-surface-container px-3 rounded-lg">
+<span>Size</span>
+<span>Chest</span>
+<span>Length</span>
+<span>Sleeve</span>
+</div>
+<div class="grid grid-cols-4 py-2 px-3 bg-surface-container-low rounded-lg">
+<span class="font-bold">XS</span>
+<span>36 - 38"</span>
+<span>44.5"</span>
+<span>33.0"</span>
+</div>
+<div class="grid grid-cols-4 py-2 px-3 bg-surface-container-lowest rounded-lg">
+<span class="font-bold">S</span>
+<span>38 - 40"</span>
+<span>45.0"</span>
+<span>33.5"</span>
+</div>
+<div class="grid grid-cols-4 py-2 px-3 bg-surface-container-low rounded-lg">
+<span class="font-bold">M</span>
+<span>40 - 42"</span>
+<span>45.5"</span>
+<span>34.0"</span>
+</div>
+<div class="grid grid-cols-4 py-2 px-3 bg-surface-container-lowest rounded-lg">
+<span class="font-bold">L</span>
+<span>42 - 44"</span>
+<span>46.0"</span>
+<span>34.5"</span>
+</div>
+</div>
+<button class="w-full mt-2 py-3 rounded-full bg-primary text-on-primary font-headline font-semibold text-sm" onclick="closeSizeGuide()">
+        Done
+      </button>
+</div>
+</div>
+<!-- Zoom Preview Modal -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/90 backdrop-blur-md flex flex-col justify-between p-4" id="zoomModal">
+<div class="flex justify-end pt-2">
+<button class="w-10 h-10 rounded-full bg-surface/20 text-surface flex items-center justify-center" onclick="closeZoom()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl flex items-center justify-center">
+<img class="w-full h-full object-cover scale-125 transition-transform duration-300" data-alt="Ultra high definition zoom view of the double-faced wool fabric texture, subtle melange threads and tailored construction stitches." id="zoomImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXgDepbw0TLymH_svToUv4K2nKdpYUSayVdaT1UQTfzjl8TP6QcpZqsmIYvlBe4D1bITvCGEkoFM_-BCflIzknbLu9YpSZlvI4fYSMrSz71k6g2sxJSY7Qaazet0nxP-YwL0mW_H3Ykt4vBthFyQ0HPZ2iC7cDuBHZhY4RIR9Q13UoGlOP2TaiLn0S21VaCc7cawOYZoQdiM3M4XCglPY5HGpvi20mWBfyhf6_cyHFf_skqPT5XSWolA"/>
+</div>
+<div class="text-center py-4 text-xs font-label text-surface/80">
+      Pinch or tap anywhere to close
+    </div>
+</div>
+<!-- Sticky Bottom Action Bar -->
+<aside class="fixed bottom-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl px-4 py-3 pb-safe shadow-[0_-8px_24px_rgba(25,28,29,0.06)]">
+<div class="max-w-md mx-auto flex items-center gap-3">
+<!-- Price & Indicator -->
+<div class="flex flex-col shrink-0 min-w-[70px]">
+<span class="text-[10px] font-label uppercase tracking-widest text-secondary font-medium">Total</span>
+<span class="text-lg font-headline font-extrabold text-on-surface leading-tight">$495.00</span>
+</div>
+<!-- Add to Bag CTA (Teal #005B71 / primary-container) -->
+<button class="flex-1 h-12 rounded-xl bg-primary-container text-on-primary font-headline font-bold text-sm flex items-center justify-center gap-2 active:scale-95 transition-all duration-150 shadow-md" id="addToBagBtn" onclick="handleAddToBag()">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span id="bagBtnText">Add to Bag</span>
+</button>
+<!-- Quick Checkout CTA -->
+<button class="h-12 px-4 rounded-xl bg-surface-container-high text-on-surface font-headline font-semibold text-xs flex items-center justify-center gap-1 active:scale-95 transition-all duration-150 shrink-0" onclick="handleQuickCheckout()">
+<span>Instant Buy</span>
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+</button>
+</div>
+</aside>
+</div>
+<script>
+  // Carousel State & Navigation
+  let currentSlide = 0;
+  const totalSlides = 4;
+  const track = document.getElementById('carouselTrack');
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  function goToSlide(index) {
+    currentSlide = index;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((dot, idx) => {
+      if (idx === currentSlide) {
+        dot.classList.remove('w-2', 'bg-on-surface-variant/40');
+        dot.classList.add('w-6', 'bg-primary');
+      } else {
+        dot.classList.remove('w-6', 'bg-primary');
+        dot.classList.add('w-2', 'bg-on-surface-variant/40');
+      }
+    });
+  }
+
+  // Touch Swipe on Carousel
+  let startX = 0;
+  let endX = 0;
+  const wrapper = document.getElementById('carouselWrapper');
+  
+  wrapper.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  wrapper.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const diff = startX - endX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0 && currentSlide < totalSlides - 1) {
+        goToSlide(currentSlide + 1);
+      } else if (diff < 0 && currentSlide > 0) {
+        goToSlide(currentSlide - 1);
+      }
+    }
+  }
+
+  // Color Swatch Selection
+  function selectColor(btn, name) {
+    document.querySelectorAll('.swatch-indicator').forEach(el => el.classList.add('hidden'));
+    const indicator = btn.querySelector('.swatch-indicator');
+    if (indicator) indicator.classList.remove('hidden');
+    document.getElementById('selectedColorName').textContent = name;
+  }
+
+  // Size Selector Pills
+  function selectSize(btn) {
+    document.querySelectorAll('.size-pill').forEach(el => {
+      el.classList.remove('bg-primary', 'text-on-primary', 'shadow-md');
+      el.classList.add('bg-surface-container-low', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+    btn.classList.add('bg-primary', 'text-on-primary', 'shadow-md');
+  }
+
+  // Accordion Toggle
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    const icon = document.getElementById(`${id}-icon`);
+    const isHidden = content.classList.contains('hidden');
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+    }
+  }
+
+  // Wishlist Delight Toggle
+  const wishlistBtn = document.getElementById('wishlistBtn');
+  const wishlistIcon = document.getElementById('wishlistIcon');
+  let isWishlisted = false;
+
+  wishlistBtn.addEventListener('click', () => {
+    isWishlisted = !isWishlisted;
+    if (isWishlisted) {
+      wishlistIcon.style.fontVariationSettings = "'FILL' 1";
+      wishlistIcon.classList.add('text-error');
+    } else {
+      wishlistIcon.style.fontVariationSettings = "'FILL' 0";
+      wishlistIcon.classList.remove('text-error');
+    }
+  });
+
+  // Modal Handlers
+  function openSizeGuide() {
+    document.getElementById('sizeGuideModal').classList.remove('hidden');
+  }
+
+  function closeSizeGuide() {
+    document.getElementById('sizeGuideModal').classList.add('hidden');
+  }
+
+  const zoomBtn = document.getElementById('zoomBtn');
+  const zoomModal = document.getElementById('zoomModal');
+
+  zoomBtn.addEventListener('click', () => {
+    zoomModal.classList.remove('hidden');
+  });
+
+  function closeZoom() {
+    zoomModal.classList.add('hidden');
+  }
+
+  zoomModal.addEventListener('click', (e) => {
+    if (e.target === zoomModal) closeZoom();
+  });
+
+  // Add to Bag Micro-Interaction
+  function handleAddToBag() {
+    const btn = document.getElementById('addToBagBtn');
+    const text = document.getElementById('bagBtnText');
+    const originalText = text.textContent;
+
+    btn.disabled = true;
+    text.textContent = 'Added to Bag';
+    btn.classList.replace('bg-primary-container', 'bg-primary');
+
+    setTimeout(() => {
+      text.textContent = originalText;
+      btn.classList.replace('bg-primary', 'bg-primary-container');
+      btn.disabled = false;
+    }, 1800);
+  }
+
+  function handleQuickCheckout() {
+    alert('Proceeding to instant checkout for $495.00');
+  }
+</script></main></body></html>

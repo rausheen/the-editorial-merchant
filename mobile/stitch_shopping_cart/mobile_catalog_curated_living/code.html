@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#394951", "on-primary-container": "#8ed1ea", "on-error": "#ffffff", "secondary": "#516169", "surface-container-high": "#e7e8e9", "tertiary": "#5c3200", "inverse-primary": "#8dd0e9", "inverse-surface": "#2e3132", "surface-container-low": "#f3f4f5", "on-tertiary-fixed-variant": "#693c08", "secondary-fixed-dim": "#b8c9d2", "error": "#ba1a1a", "on-tertiary-fixed": "#2d1600", "on-primary-fixed": "#001f28", "on-error-container": "#93000a", "tertiary-container": "#784815", "surface-dim": "#d9dadb", "primary-fixed": "#b7eaff", "surface": "#f8f9fa", "on-surface-variant": "#40484c", "surface-bright": "#f8f9fa", "on-surface": "#191c1d", "outline-variant": "#bfc8cc", "primary-fixed-dim": "#8dd0e9", "surface-variant": "#e1e3e4", "on-primary-fixed-variant": "#004e61", "on-secondary-container": "#57676f", "error-container": "#ffdad6", "surface-container": "#edeeef", "inverse-on-surface": "#f0f1f2", "secondary-container": "#d4e5ef", "on-background": "#191c1d", "background": "#f8f9fa", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc0", "on-tertiary-container": "#fdba7d", "tertiary-fixed-dim": "#fcb97c", "secondary-fixed": "#d4e5ef", "surface-container-highest": "#e1e3e4", "primary": "#004253", "surface-tint": "#19667d", "on-secondary-fixed": "#0e1e24", "primary-container": "#005b71", "outline": "#70787d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: {}, fontFamily: { headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"] }, fontSize: {} } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-5 flex items-center justify-between"><div class="flex flex-col justify-center"><span class="text-[11px] font-label uppercase tracking-[0.2em] text-secondary font-medium">The Editorial Merchant</span><h1 class="text-lg font-headline font-bold tracking-tight text-on-surface leading-tight">Catalog</h1></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">favorite</span></button><button aria-label="Shopping Bag" class="w-11 h-11 relative flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-label font-bold text-on-primary">2</span></button><div class="ml-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col flex-grow relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Editorial Sub-Curator Bar & Category Stream -->
+<section class="w-full bg-surface-container-low px-4 pt-4 pb-3">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[11px] font-label font-semibold uppercase tracking-wider text-secondary">Spring '25 Edition</span>
+</div>
+<span class="text-xs font-label text-on-surface-variant font-medium">68 Crafted Objects</span>
+</div>
+<!-- Category Pills (Overflow Scroll) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-4 px-4 scroll-smooth">
+<button class="shrink-0 px-4 py-1.5 rounded-full text-xs font-label font-semibold bg-primary text-on-primary shadow-sm transition-transform active:scale-95">
+        All
+      </button>
+<button class="shrink-0 px-4 py-1.5 rounded-full text-xs font-label font-medium bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shadow-sm">
+        Furniture <span class="text-[10px] opacity-75 font-normal ml-0.5">(12)</span>
+</button>
+<button class="shrink-0 px-4 py-1.5 rounded-full text-xs font-label font-medium bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shadow-sm">
+        Artisanal Decor <span class="text-[10px] opacity-75 font-normal ml-0.5">(24)</span>
+</button>
+<button class="shrink-0 px-4 py-1.5 rounded-full text-xs font-label font-medium bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shadow-sm">
+        Soft Textiles <span class="text-[10px] opacity-75 font-normal ml-0.5">(8)</span>
+</button>
+<button class="shrink-0 px-4 py-1.5 rounded-full text-xs font-label font-medium bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all active:scale-95 shadow-sm">
+        Lighting <span class="text-[10px] opacity-75 font-normal ml-0.5">(16)</span>
+</button>
+</div>
+</section>
+<!-- Filter & Sorting Control Strip -->
+<section class="px-4 py-3 bg-surface flex items-center justify-between gap-2 shadow-[0_1px_4px_rgba(25,28,29,0.02)]">
+<!-- Filter Trigger Button -->
+<button class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full text-xs font-label font-semibold text-on-surface active:scale-95 transition-all" id="filterDrawerTrigger">
+<span class="material-symbols-outlined text-[17px] text-primary">tune</span>
+<span>Filter</span>
+<span class="w-4 h-4 rounded-full bg-primary text-on-primary text-[10px] flex items-center justify-center font-bold">3</span>
+</button>
+<div class="flex items-center gap-2">
+<!-- Sort Pill Dropdown Selector -->
+<div class="relative inline-flex items-center">
+<select class="appearance-none bg-surface-container-low pl-3 pr-7 py-1.5 rounded-full text-xs font-label font-medium text-on-surface-variant focus:outline-none focus:text-on-surface">
+<option>Sort: Popularity</option>
+<option>Sort: Newest Arrivals</option>
+<option>Sort: Price: Low to High</option>
+<option>Sort: Price: High to Low</option>
+<option>Sort: Curators' Pick</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-secondary absolute right-2 pointer-events-none">expand_more</span>
+</div>
+<!-- Grid / Single Stream Layout Switcher -->
+<div class="flex bg-surface-container-low p-0.5 rounded-full items-center">
+<button aria-label="Grid View" class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary shadow-sm transition-all" id="viewGridBtn">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+</button>
+<button aria-label="List View" class="w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-all" id="viewListBtn">
+<span class="material-symbols-outlined text-[16px]">view_agenda</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Active Filter Badges Strip -->
+<section class="px-4 pb-2.5 pt-0.5 flex flex-wrap items-center gap-1.5">
+<div class="inline-flex items-center gap-1.5 bg-secondary-container px-2.5 py-1 rounded-full text-[11px] font-label font-medium text-on-secondary-container">
+<span>Price: $50–$2,500</span>
+<button aria-label="Remove price filter" class="w-3.5 h-3.5 flex items-center justify-center rounded-full hover:bg-secondary-fixed-dim/40 transition-colors">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 bg-secondary-container px-2.5 py-1 rounded-full text-[11px] font-label font-medium text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-700"></span>
+<span>In Stock</span>
+<button aria-label="Remove in stock filter" class="w-3.5 h-3.5 flex items-center justify-center rounded-full hover:bg-secondary-fixed-dim/40 transition-colors">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</button>
+</div>
+<button class="text-[11px] font-label font-medium text-primary hover:underline px-1">
+      Clear all
+    </button>
+</section>
+<!-- Product Listing Grid -->
+<div class="px-4 py-2 grid grid-cols-2 gap-3.5" id="productGallery">
+<!-- Card 1: Artisanal Glazed Pitcher -->
+<article class="product-item bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between shadow-sm relative group transition-all duration-300">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2.5">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-end ceramic stoneware pitcher with an earthy reactive speckled beige and teal glaze resting on a minimalist stone pedestal under warm diffused daylight studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeCSK6NInmqzKCuSX3vMxs0yhxVYXeGovXKkR5r4lERh5milttKdykWluWlIXcJZQiZzOHj4sNa9NiwCyQtXIcYV_mXg4EFUGgMKuK405spNnqgokt75EZwhB0u3bRux1hQhJ88DtTK0DBNwZy2l-klxjwagB4toEPonx31VX1GQm-bhJr1Tn_dnW6UU07koDgcaOfwg_D86fbR8uxw7i12l4g27kxVC-eVB9G_0wAb6c-6kIH-mrp7Q"/>
+<button aria-label="Save to wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-[9px] font-label font-bold text-on-surface uppercase tracking-wider">
+          Studio Kanso
+        </span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-label font-semibold text-on-surface">4.9</span>
+<span class="text-[10px] font-label text-secondary">(42)</span>
+</div>
+<h3 class="text-xs font-headline font-semibold text-on-surface line-clamp-1 leading-snug">Artisanal Glazed Pitcher</h3>
+<p class="text-[11px] font-body text-secondary mt-0.5 line-clamp-1">Hand-thrown stoneware</p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-headline font-bold text-primary">$185.00</span>
+</div>
+<button aria-label="Add to bag" class="add-to-bag-btn w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Oak Sculptural Seat -->
+<article class="product-item bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between shadow-sm relative group transition-all duration-300">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2.5">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Scandinavian solid white oak sculptural accent stool with organic curved silhouette placed on natural linen floor in an architect interior with warm morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-aqnDXSXmnfay4LKRDDbfoSUHqbP7tqIqzPWGSDMzLQ7Yv9055h3RAKWkSDpBCFFzDdAStg69vcaj-t79BDa4S99_ovy0e2coaZTgTW5iHPr7AWVQMYXRpQxMIcaQTSiM-XOOeTR44RN6vCJrso3EXJIPPpnjzDz77ZeY1Br8D208g6FtXB0iAN9v-SGrp2Hpq7dTlH0BBm3wMxeXI2XCpLbNSY3WPoGtBhOqGGeQyH9yInrxXNoAWQ"/>
+<button aria-label="Save to wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-[9px] font-label font-bold text-on-surface uppercase tracking-wider">
+          Fjord Form
+        </span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-label font-semibold text-on-surface">4.8</span>
+<span class="text-[10px] font-label text-secondary">(19)</span>
+</div>
+<h3 class="text-xs font-headline font-semibold text-on-surface line-clamp-1 leading-snug">Oak Sculptural Seat</h3>
+<p class="text-[11px] font-body text-secondary mt-0.5 line-clamp-1">FSC-Certified White Oak</p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-headline font-bold text-primary">$1,250.00</span>
+</div>
+<button aria-label="Add to bag" class="add-to-bag-btn w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Raw Silk Throw (Sale) -->
+<article class="product-item bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between shadow-sm relative group transition-all duration-300">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2.5">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Textured raw wild silk throw blanket in warm sand tones with fringed edges artfully draped over a soft contemporary lounge chair in a high-end serene interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfZu8d6qy2lAqLWtYF-2v4NecoVxhZ-fZnb_A8W35RZ9842Bx5_3UD2q3lUs-clbO6n22y4fa7x7_7aCMGuMjY3ttJ_JpbW_LVqdcv706WYFTaUqKeWDfNHt0Diha_Hy9QL3tuOWmy7v-BVASITPx44V3VXt70nF1n7tVOrDtba3q8ZskLSBx65ah47-ujNxkOcbYWPQdsFVMxYToDADuMPHkgtTCzHSdZnPQmcGleG7BEH6GD6zTcZw"/>
+<button aria-label="Save to wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary text-[9px] font-label font-bold uppercase tracking-wider">
+          -20%
+        </span>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-[9px] font-label font-bold text-on-surface uppercase tracking-wider">
+          Aura Atelier
+        </span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-label font-semibold text-on-surface">5.0</span>
+<span class="text-[10px] font-label text-secondary">(31)</span>
+</div>
+<h3 class="text-xs font-headline font-semibold text-on-surface line-clamp-1 leading-snug">Raw Silk Throw</h3>
+<p class="text-[11px] font-body text-secondary mt-0.5 line-clamp-1">Unbleached botanical weave</p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="text-xs font-headline font-bold text-primary">$340.00</span>
+<span class="text-[10px] font-headline text-secondary line-through">$425.00</span>
+</div>
+<button aria-label="Add to bag" class="add-to-bag-btn w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Brass Horizon Lamp -->
+<article class="product-item bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between shadow-sm relative group transition-all duration-300">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2.5">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Brushed antique brass geometric desk lamp casting an amber atmospheric glow on a dark walnut table surface in a quiet editorial mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATsMZoD20OybX7Y6Ru-zdiTRHfnuarKEU1VMNhE_E03l8Hoca1GDUhI-69S9pVP8Pe43ZQWe9H5oLZMuI7MUZYoQbYWh9NPYJcdbFVwnofkaYCh_3khv55R453AqjQv3WP7kY-199nFRZIxVNVNIDoPZ5aamzynNT3c1RftG_6jBKcEuVDhonAVqUnBWAjoHunZ99HlU7B7-wnGWwvIAr8dYoODTb39EkPJPlz8vJgA2-kS4m68RnyeQ"/>
+<button aria-label="Save to wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-[9px] font-label font-bold text-on-surface uppercase tracking-wider">
+          Luminaire Nord
+        </span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-label font-semibold text-on-surface">4.7</span>
+<span class="text-[10px] font-label text-secondary">(14)</span>
+</div>
+<h3 class="text-xs font-headline font-semibold text-on-surface line-clamp-1 leading-snug">Brass Horizon Lamp</h3>
+<p class="text-[11px] font-body text-secondary mt-0.5 line-clamp-1">Warm dimmable LED core</p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-headline font-bold text-primary">$495.00</span>
+</div>
+<button aria-label="Add to bag" class="add-to-bag-btn w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5: Minimalist Ceramic Vessel -->
+<article class="product-item bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between shadow-sm relative group transition-all duration-300">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2.5">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Chalk-white matte earthenware vase with subtle tactile ribbed ribs holding a single dried eucalyptus stem on a travertine tabletop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3xJc0Wc4d9FJCLeQuMnIX0A7URjgwlWBAdoSwVlqGFLhjTQ8sIZXGhKvJVjl1OTE_EUEcrhh2-_6i4rD12VnLdnNMARDYTkKxYW8jh0gASWjWzfgqC1xsYVmfXEV2ohl6n6YxzB_-kB_cs2OxV9vBBm3xVZBi5iPDM-Nsvko1G48vPq2if-nXfqr53GYqQOfWCcyeVPhm_sKCBcP-sVFB5vTHEOZVFvitgogFzmJ5StJFiyRVE3NUlg"/>
+<button aria-label="Save to wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-[9px] font-label font-bold text-on-surface uppercase tracking-wider">
+          Terra Edition
+        </span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-label font-semibold text-on-surface">4.9</span>
+<span class="text-[10px] font-label text-secondary">(58)</span>
+</div>
+<h3 class="text-xs font-headline font-semibold text-on-surface line-clamp-1 leading-snug">Minimalist Ceramic Vessel</h3>
+<p class="text-[11px] font-body text-secondary mt-0.5 line-clamp-1">Matte biscuit unglazed</p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-headline font-bold text-primary">$110.00</span>
+</div>
+<button aria-label="Add to bag" class="add-to-bag-btn w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 6: Architect Series Watch -->
+<article class="product-item bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between shadow-sm relative group transition-all duration-300">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2.5">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Monochrome architectural timepiece with brushed stainless steel casing and deep petrol blue watch face placed beside architectural sketch paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqHZe3CdYEFWFKxq6koJvU1X10s3xZMiGnlUZACr7OnyzFVLf2xWCETUH8snhQAo9yosoLrHKShPZQVx7tB4uMcYX6lk4919zNfM4OsgPxcOkFoUa6Q1tUbYoU8bRrAlhTqC2NljIQJibQWIjzQHql7s17YrbfCNh9slwnwYvbDsHE4m6c2m3IpNDjfBNv_vDYZyA2vmTxkb42-3TWtTPRUlUnaRaaxCfek5-RkvIYdbCAIEN-PZyxrw"/>
+<button aria-label="Save to wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm text-[9px] font-label font-bold text-on-surface uppercase tracking-wider">
+          Atelier Mono
+        </span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-label font-semibold text-on-surface">4.6</span>
+<span class="text-[10px] font-label text-secondary">(27)</span>
+</div>
+<h3 class="text-xs font-headline font-semibold text-on-surface line-clamp-1 leading-snug">Architect Series Watch</h3>
+<p class="text-[11px] font-body text-secondary mt-0.5 line-clamp-1">Swiss movement &amp; calfskin</p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-headline font-bold text-primary">$195.00</span>
+</div>
+<button aria-label="Add to bag" class="add-to-bag-btn w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-center active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Editorial Spotlight Story Banner -->
+<section class="mx-4 my-5 bg-surface-container-low rounded-2xl p-4 overflow-hidden relative">
+<div class="relative z-10 max-w-[70%]">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Curator's Feature</span>
+<h4 class="text-sm font-headline font-bold text-on-surface mt-1 leading-tight">Quiet Form: Ceramics by Studio Kanso</h4>
+<p class="text-[11px] font-body text-on-surface-variant mt-1 leading-relaxed">Discover timeless slow-living pottery shaped along the coastal cliffs of Mie prefecture.</p>
+<button class="mt-3 inline-flex items-center gap-1 text-xs font-label font-semibold text-primary">
+        Read Story
+        <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-32 bg-cover bg-center opacity-85" data-alt="Artisanal potter hands molding natural speckled stoneware clay on a potter wheel with delicate water splashes and soft sunlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfPf-K-eaYSPQRCyGbr7K_gnwGPUa3qgilxchJt4KuHGbEJIZTjxks-Klmycyhw9fvOCpizwPOaT7dK9EH8Uq3u-zQlVnbAqsKi_ZwYRy5zRzSEIXuzHXf4Aq2dDyDUdUXZbjLipQFucEiPYL6lqtLvFuF71dAyD50lb8C16-UDhV5msJ8mbLWX36ktN7mS3q84gb__g9Fvh0_Bpi1G761cRzszOnnH14nSv9BxVti9dRmO-M4HhKk7A')"></div>
+</section>
+<!-- Infinite Scroll / Discover More Indicator -->
+<section class="w-full py-8 px-4 flex flex-col items-center justify-center text-center">
+<div class="relative flex items-center justify-center w-10 h-10 mb-2">
+<svg class="w-8 h-8 animate-spin text-primary-container" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-80" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-xs font-headline font-semibold text-on-surface">Curating More Essentials</span>
+<p class="text-[11px] font-body text-secondary mt-0.5">Revealing archival collections &amp; quiet rarities</p>
+</section>
+<!-- Interactive Filter Bottom Sheet Modal -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300 opacity-0" id="filterModal">
+<!-- Backdrop Scrim -->
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm transition-opacity" id="filterBackdrop"></div>
+<!-- Drawer Container -->
+<div class="absolute inset-x-0 bottom-0 max-h-[85vh] bg-surface rounded-t-3xl shadow-2xl flex flex-col transform translate-y-full transition-transform duration-300" id="filterContent">
+<div class="w-12 h-1 bg-surface-container-high rounded-full mx-auto mt-3 mb-1"></div>
+<div class="px-5 py-3 flex items-center justify-between">
+<div>
+<h2 class="text-base font-headline font-bold text-on-surface">Filter Collection</h2>
+<span class="text-[11px] font-label text-secondary">3 active parameters</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface active:scale-95" id="closeFilterBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="px-5 py-3 overflow-y-auto space-y-5">
+<!-- Availability -->
+<div>
+<label class="text-xs font-headline font-bold uppercase tracking-wider text-secondary block mb-2.5">Availability</label>
+<div class="flex gap-2">
+<button class="px-3.5 py-1.5 rounded-full text-xs font-label font-semibold bg-primary text-on-primary">In Stock (54)</button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-label font-medium bg-surface-container-low text-on-surface-variant">Pre-Order (14)</button>
+</div>
+</div>
+<!-- Material Selection -->
+<div>
+<label class="text-xs font-headline font-bold uppercase tracking-wider text-secondary block mb-2.5">Craft &amp; Material</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-full text-xs font-label bg-secondary-container text-on-secondary-container font-medium">Stoneware</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-label bg-surface-container-low text-on-surface-variant font-medium">Solid Oak</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-label bg-secondary-container text-on-secondary-container font-medium">Raw Wild Silk</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-label bg-surface-container-low text-on-surface-variant font-medium">Brushed Brass</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-label bg-surface-container-low text-on-surface-variant font-medium">Travertine</span>
+</div>
+</div>
+<!-- Price Range Slider Representation -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-xs font-headline font-bold uppercase tracking-wider text-secondary">Price Window</label>
+<span class="text-xs font-headline font-bold text-primary">$50 - $2,500</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full relative my-3">
+<div class="absolute left-[5%] right-[20%] bg-primary h-1.5 rounded-full"></div>
+<div class="absolute left-[5%] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-lowest shadow-md -translate-x-1/2"></div>
+<div class="absolute right-[20%] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-lowest shadow-md translate-x-1/2"></div>
+</div>
+</div>
+</div>
+<!-- Drawer Bottom Action Footer -->
+<div class="p-5 bg-surface-container-low flex items-center gap-3 mt-auto">
+<button class="w-1/3 py-2.5 rounded-full text-xs font-label font-semibold text-secondary hover:text-on-surface">Reset</button>
+<button class="w-2/3 py-2.5 rounded-full text-xs font-label font-semibold bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-sm active:scale-95 transition-all" id="applyFilterBtn">Apply Results (68)</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Feedback for Micro-interactions -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full text-xs font-label font-medium shadow-xl flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check_circle</span>
+<span id="toastMessage">Added to your curated bag</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive Grid vs Single List switch
+    const gridBtn = document.getElementById('viewGridBtn');
+    const listBtn = document.getElementById('viewListBtn');
+    const gallery = document.getElementById('productGallery');
+
+    if (gridBtn && listBtn && gallery) {
+      gridBtn.addEventListener('click', () => {
+        gallery.className = "px-4 py-2 grid grid-cols-2 gap-3.5";
+        gridBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        gridBtn.classList.remove('text-on-surface-variant');
+        listBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        listBtn.classList.add('text-on-surface-variant');
+      });
+
+      listBtn.addEventListener('click', () => {
+        gallery.className = "px-4 py-2 grid grid-cols-1 gap-3.5";
+        listBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        listBtn.classList.remove('text-on-surface-variant');
+        gridBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        gridBtn.classList.add('text-on-surface-variant');
+      });
+    }
+
+    // Filter Bottom Sheet Logic
+    const trigger = document.getElementById('filterDrawerTrigger');
+    const closeBtn = document.getElementById('closeFilterBtn');
+    const applyBtn = document.getElementById('applyFilterBtn');
+    const backdrop = document.getElementById('filterBackdrop');
+    const modal = document.getElementById('filterModal');
+    const content = document.getElementById('filterContent');
+
+    function openModal() {
+      modal.classList.remove('pointer-events-none', 'opacity-0');
+      modal.classList.add('opacity-100');
+      content.classList.remove('translate-y-full');
+    }
+
+    function closeModal() {
+      content.classList.add('translate-y-full');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    if (trigger) trigger.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (applyBtn) applyBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    // Toast Utility
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    let toastTimeout;
+
+    function showToast(message) {
+      if (!toast) return;
+      if (toastMsg) toastMsg.innerText = message;
+      clearTimeout(toastTimeout);
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+      }, 2300);
+    }
+
+    // Heart wishlist micro-interaction
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFavorited = icon.style.fontVariationSettings?.includes("'FILL' 1");
+
+        if (isFavorited) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-error');
+          btn.classList.add('text-on-surface-variant');
+          showToast('Removed from saved items');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.remove('text-on-surface-variant');
+          btn.classList.add('text-error');
+          showToast('Saved to your aesthetic shortlist');
+        }
+      });
+    });
+
+    // Add to Bag Micro-interaction
+    document.querySelectorAll('.add-to-bag-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const originalIcon = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span>';
+        btn.classList.add('scale-95');
+        
+        showToast('Piece added to your shopping bag');
+        setTimeout(() => {
+          btn.innerHTML = originalIcon;
+          btn.classList.remove('scale-95');
+        }, 1200);
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(25,28,29,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-2"><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">storefront</span><span class="text-[11px] font-label tracking-tight">Shop</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-12 transition-colors group text-primary font-semibold" data-path="catalog" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">explore</span><span class="text-[11px] font-label tracking-tight">Catalog</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="bag" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">local_mall</span><span class="text-[11px] font-label tracking-tight">Bag</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">bookmarks</span><span class="text-[11px] font-label tracking-tight">Wishlist</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="account" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">account_circle</span><span class="text-[11px] font-label tracking-tight">Profile</span></a></div></nav></body></html>

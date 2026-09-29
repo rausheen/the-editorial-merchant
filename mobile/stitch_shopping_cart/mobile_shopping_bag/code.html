@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#394951", "on-primary-container": "#8ed1ea", "on-error": "#ffffff", "secondary": "#516169", "surface-container-high": "#e7e8e9", "tertiary": "#5c3200", "inverse-primary": "#8dd0e9", "inverse-surface": "#2e3132", "surface-container-low": "#f3f4f5", "on-tertiary-fixed-variant": "#693c08", "secondary-fixed-dim": "#b8c9d2", "error": "#ba1a1a", "on-tertiary-fixed": "#2d1600", "on-primary-fixed": "#001f28", "on-error-container": "#93000a", "tertiary-container": "#784815", "surface-dim": "#d9dadb", "primary-fixed": "#b7eaff", "surface": "#f8f9fa", "on-surface-variant": "#40484c", "surface-bright": "#f8f9fa", "on-surface": "#191c1d", "outline-variant": "#bfc8cc", "primary-fixed-dim": "#8dd0e9", "surface-variant": "#e1e3e4", "on-primary-fixed-variant": "#004e61", "on-secondary-container": "#57676f", "error-container": "#ffdad6", "surface-container": "#edeeef", "inverse-on-surface": "#f0f1f2", "secondary-container": "#d4e5ef", "on-background": "#191c1d", "background": "#f8f9fa", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc0", "on-tertiary-container": "#fdba7d", "tertiary-fixed-dim": "#fcb97c", "secondary-fixed": "#d4e5ef", "surface-container-highest": "#e1e3e4", "primary": "#004253", "surface-tint": "#19667d", "on-secondary-fixed": "#0e1e24", "primary-container": "#005b71", "outline": "#70787d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: {}, fontFamily: { headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"] }, fontSize: {} } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-5 flex items-center justify-between"><div class="flex flex-col justify-center"><span class="text-[11px] font-label uppercase tracking-[0.2em] text-secondary font-medium">The Editorial Merchant</span><h1 class="text-lg font-headline font-bold tracking-tight text-on-surface leading-tight">Bag</h1></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">favorite</span></button><button aria-label="Shopping Bag" class="w-11 h-11 relative flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-label font-bold text-on-primary">2</span></button><div class="ml-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col flex-grow relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Shipping Incentive Banner -->
+<section class="px-5 pt-4 pb-2">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_20px_rgba(25,28,29,0.04)] relative overflow-hidden">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[17px]">local_shipping</span>
+</div>
+<span class="text-xs font-label text-on-surface font-medium tracking-tight">Complimentary Delivery</span>
+</div>
+<span class="text-xs font-headline font-bold text-primary" id="shipping-away-label">Add $42.00</span>
+</div>
+<p class="text-xs font-body text-secondary mb-3 leading-relaxed">
+        You are just <span class="font-semibold text-on-surface">$42.00</span> away from enjoying free express shipping.
+      </p>
+<!-- Progress Bar Track -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden p-0.5">
+<div class="bg-gradient-to-r from-primary to-primary-container h-full rounded-full transition-all duration-700 ease-out" id="free-shipping-bar" style="width: 79%;"></div>
+</div>
+</div>
+</section>
+<!-- Bag Items Section -->
+<section class="px-5 py-3 flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label uppercase tracking-widest text-secondary font-semibold">Your Selection (2)</span>
+<button class="text-xs font-label text-primary hover:opacity-80 transition-opacity font-medium">Clear All</button>
+</div>
+<!-- Item 1: Modern Tailored Overcoat -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_20px_rgba(25,28,29,0.03)] flex gap-4 relative transition-all duration-300" id="cart-item-1">
+<div class="relative w-24 h-32 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist studio editorial photograph of a modern tailored wool overcoat in deep charcoal grey against a warm limestone backdrop with soft directional natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtwEgndxgNdooJazfVAeznF30bVUYjg928i0vV2MqlTClQl9uorhMwPStJTUy4Rl8AM_m8S8jI6cK08XntVjpzyYS8DZM5BwKngmFo2NvkzaVDbnLjipp1N-s04lSah6YuSe_yY9gGKRRjvp2avnIuySlUW6g3WqkBUegUVaf9yHZAPSaSewFtsgXm2IHwYmsPf3QENoplxT2oiVD4zUr2hVhc43VVbLum6PfFAzZS8tq0JkKAfY-Ixg"/>
+<span class="absolute top-1.5 left-1.5 bg-surface/90 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-label font-bold text-on-surface tracking-wider uppercase">New</span>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline font-bold text-sm text-on-surface leading-snug truncate">Modern Tailored Overcoat</h2>
+<button aria-label="Remove Modern Tailored Overcoat" class="text-outline hover:text-error transition-colors p-1 -mr-1 -mt-1 rounded-full" onclick="removeItem('cart-item-1', 248.00)">
+<span class="material-symbols-outlined text-[19px]">delete</span>
+</button>
+</div>
+<p class="text-xs font-body text-secondary mt-0.5">Charcoal Grey • Size L</p>
+<span class="inline-block mt-1 font-headline font-bold text-sm text-on-surface">$248.00</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="inline-flex items-center bg-surface-container-low rounded-full px-1.5 py-1">
+<button class="w-6 h-6 flex items-center justify-center text-on-surface hover:bg-surface-container-highest rounded-full transition-colors active:scale-90" onclick="updateQty('qty-1', -1, 248.00)">
+<span class="material-symbols-outlined text-[15px]">remove</span>
+</button>
+<span class="w-7 text-center font-label text-xs font-semibold text-on-surface" id="qty-1">1</span>
+<button class="w-6 h-6 flex items-center justify-center text-on-surface hover:bg-surface-container-highest rounded-full transition-colors active:scale-90" onclick="updateQty('qty-1', 1, 248.00)">
+<span class="material-symbols-outlined text-[15px]">add</span>
+</button>
+</div>
+<button class="text-xs font-label text-secondary hover:text-primary flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+<span class="text-[11px]">Save</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Architect Series Watch -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_20px_rgba(25,28,29,0.03)] flex gap-4 relative transition-all duration-300" id="cart-item-2">
+<div class="relative w-24 h-32 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-end editorial studio product shot of an architect series minimalist wristwatch with a brushed silver bezel and rich tan leather strap resting upon travertine stone in warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYkrqgVDw54lQ1TIhas-H1LXRoEXAOk8QnaOmxS6kHJFmWYIptqOM2hgcxyWisD0FQezMKUwPxIuSmzIOwohkQKmTlpbqH-1cjVeoX88nEwgkupsVAsbIxJjhD5TPxZLAP_isD5owLrVVmodl0ZMueGuJlo_-AznIYSMsaCrJuRpptEVDl1S1hHO4eaDl5G4qDNq0FEDn3WO1QETVn9ojBCcJ-FTeCFvDI5JX2vmdlZxRV43ChCwn4ew"/>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline font-bold text-sm text-on-surface leading-snug truncate">Architect Series Watch</h2>
+<button aria-label="Remove Architect Series Watch" class="text-outline hover:text-error transition-colors p-1 -mr-1 -mt-1 rounded-full" onclick="removeItem('cart-item-2', 195.00)">
+<span class="material-symbols-outlined text-[19px]">delete</span>
+</button>
+</div>
+<p class="text-xs font-body text-secondary mt-0.5">Silver / Tan Leather</p>
+<span class="inline-block mt-1 font-headline font-bold text-sm text-on-surface">$195.00</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="inline-flex items-center bg-surface-container-low rounded-full px-1.5 py-1">
+<button class="w-6 h-6 flex items-center justify-center text-on-surface hover:bg-surface-container-highest rounded-full transition-colors active:scale-90" onclick="updateQty('qty-2', -1, 195.00)">
+<span class="material-symbols-outlined text-[15px]">remove</span>
+</button>
+<span class="w-7 text-center font-label text-xs font-semibold text-on-surface" id="qty-2">1</span>
+<button class="w-6 h-6 flex items-center justify-center text-on-surface hover:bg-surface-container-highest rounded-full transition-colors active:scale-90" onclick="updateQty('qty-2', 1, 195.00)">
+<span class="material-symbols-outlined text-[15px]">add</span>
+</button>
+</div>
+<button class="text-xs font-label text-secondary hover:text-primary flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+<span class="text-[11px]">Save</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Promo Code Card -->
+<section class="px-5 py-2">
+<div class="bg-surface-container-low rounded-xl p-3.5 flex items-center gap-2">
+<div class="flex-grow flex items-center bg-surface-container-lowest rounded-lg px-3 py-2 shadow-sm">
+<span class="material-symbols-outlined text-outline text-[19px] mr-2">sell</span>
+<input class="w-full bg-transparent font-body text-xs text-on-surface placeholder:text-outline focus:outline-none uppercase tracking-wider" id="promo-input" placeholder="Gift card or discount code" type="text"/>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container-highest hover:bg-secondary-container text-on-surface font-label font-semibold text-xs transition-colors active:scale-95" onclick="applyPromo()">
+        Apply
+      </button>
+</div>
+<p class="text-[11px] font-label text-secondary mt-1.5 px-1 hidden flex items-center gap-1" id="promo-feedback">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+<span>Code ARCHITECT applied: $20 discount active</span>
+</p>
+</section>
+<!-- Order Summary Card -->
+<section class="px-5 py-3">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_20px_rgba(25,28,29,0.03)] flex flex-col gap-2.5">
+<h3 class="font-headline font-bold text-sm text-on-surface mb-1">Order Summary</h3>
+<div class="flex justify-between items-center text-xs font-body text-secondary">
+<span>Subtotal</span>
+<span class="font-medium text-on-surface font-label" id="summary-subtotal">$443.00</span>
+</div>
+<div class="flex justify-between items-center text-xs font-body text-secondary">
+<span class="flex items-center gap-1">
+          Estimated Shipping
+          <span class="material-symbols-outlined text-[14px] text-outline cursor-pointer">help_outline</span>
+</span>
+<span class="font-medium text-on-surface font-label" id="summary-shipping">$15.00</span>
+</div>
+<div class="flex justify-between items-center text-xs font-body text-secondary">
+<span>Estimated Tax (8%)</span>
+<span class="font-medium text-on-surface font-label" id="summary-tax">$35.44</span>
+</div>
+<div class="h-px bg-surface-container-high my-1"></div>
+<div class="flex justify-between items-baseline pt-0.5">
+<div>
+<span class="font-headline font-bold text-base text-on-surface">Total</span>
+<span class="text-[11px] font-body text-secondary ml-1">USD</span>
+</div>
+<span class="font-headline font-extrabold text-lg text-primary tracking-tight" id="summary-total">$493.44</span>
+</div>
+</div>
+</section>
+<!-- Trust Badges Bar -->
+<section class="px-5 py-3">
+<div class="bg-surface-container-low rounded-xl py-3 px-4 flex items-center justify-around">
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[17px]">lock</span>
+</div>
+<span class="text-[10px] font-label font-medium text-on-surface leading-tight">256-Bit SSL<br/><span class="text-secondary text-[9px]">Encrypted</span></span>
+</div>
+<div class="w-px h-7 bg-surface-container-highest"></div>
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[17px]">verified_user</span>
+</div>
+<span class="text-[10px] font-label font-medium text-on-surface leading-tight">Buyer Shield<br/><span class="text-secondary text-[9px]">Protection</span></span>
+</div>
+<div class="w-px h-7 bg-surface-container-highest"></div>
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[17px]">replay</span>
+</div>
+<span class="text-[10px] font-label font-medium text-on-surface leading-tight">30 Days<br/><span class="text-secondary text-[9px]">Return Policy</span></span>
+</div>
+</div>
+</section>
+<!-- Checkout Execution Area -->
+<section class="px-5 pt-3 pb-8 flex flex-col gap-2.5">
+<!-- Main Checkout CTA Button -->
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 px-6 rounded-full font-label font-semibold text-sm shadow-[0_10px_25px_rgba(0,66,83,0.22)] active:scale-[0.98] transition-all flex items-center justify-between group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+<span>Proceed to Checkout</span>
+</div>
+<div class="flex items-center gap-1.5 font-headline font-bold tracking-wide">
+<span id="btn-total-label">$493.44</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+</button>
+<!-- Accelerated Express Wallets (Apple Pay & Google Pay) -->
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<button class="bg-surface-container-lowest text-on-surface hover:bg-surface-container-high py-2.5 px-4 rounded-xl flex items-center justify-center gap-1.5 font-label font-semibold text-xs shadow-sm active:scale-95 transition-all">
+<svg class="h-4 w-4 fill-current" viewbox="0 0 170 170">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.7-7.93-12.04-14.54-6.3-9.59-11.22-20.73-14.76-33.43-3.53-12.7-5.3-24.89-5.3-36.56 0-14.44 3.73-26.4 11.19-35.88 7.45-9.48 16.73-14.33 27.83-14.54 4.58 0 9.77 1.25 15.57 3.75 5.8 2.5 9.73 3.82 11.8 3.96 1.85-.14 5.92-1.52 12.21-4.14 6.3-2.62 11.39-3.79 15.28-3.51 11.66.76 21.05 4.88 28.16 12.36-10.23 6.19-15.24 14.77-15.02 25.74.22 8.58 3.52 15.82 9.9 21.71 6.38 5.89 13.9 9.3 22.56 10.23-2.28 6.96-5.18 14.07-8.71 21.32zM119.22 31.84c0-7.39 2.66-14.47 7.97-21.23 5.31-6.76 11.88-10.61 19.72-11.55.22 1.09.33 2.07.33 2.94 0 7.28-2.77 14.4-8.31 21.34-5.54 6.95-12.18 10.87-19.92 11.77-.22-1.09-.33-2.07-.33-3.27z"></path>
+</svg>
+<span>Pay</span>
+</button>
+<button class="bg-surface-container-lowest text-on-surface hover:bg-surface-container-high py-2.5 px-4 rounded-xl flex items-center justify-center gap-1.5 font-label font-semibold text-xs shadow-sm active:scale-95 transition-all">
+<svg class="h-4 w-4" viewbox="0 0 24 24">
+<path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.04h3.88c2.27-2.09 3.66-5.17 3.66-9.14z" fill="#4285F4"></path>
+<path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.04c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.13C3.27 21.41 7.34 24 12 24z" fill="#34A853"></path>
+<path d="M5.28 14.28c-.25-.72-.38-1.49-.38-2.28s.13-1.56.38-2.28V6.59H1.25C.45 8.19 0 10.04 0 12s.45 3.81 1.25 5.41l4.03-3.13z" fill="#FBBC05"></path>
+<path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.27 2.59 1.25 6.59l4.03 3.13c.95-2.83 3.6-4.97 6.72-4.97z" fill="#EA4335"></path>
+</svg>
+<span>GPay</span>
+</button>
+</div>
+<!-- Editorial note -->
+<p class="text-[11px] font-body text-secondary text-center tracking-tight mt-1">
+      Duties and taxes are calculated during checkout based on delivery address.
+    </p>
+</section>
+</div>
+<script>
+  let cartState = {
+    items: {
+      'qty-1': { qty: 1, price: 248.00 },
+      'qty-2': { qty: 1, price: 195.00 }
+    },
+    shippingThreshold: 485.00,
+    shippingBaseCost: 15.00,
+    taxRate: 0.08,
+    discount: 0.00
+  };
+
+  function updateTotals() {
+    let subtotal = 0;
+    Object.keys(cartState.items).forEach(id => {
+      subtotal += cartState.items[id].qty * cartState.items[id].price;
+    });
+
+    const isFreeShipping = subtotal >= cartState.shippingThreshold;
+    const shipping = subtotal > 0 ? (isFreeShipping ? 0 : cartState.shippingBaseCost) : 0;
+    const taxableAmount = Math.max(0, subtotal - cartState.discount);
+    const tax = taxableAmount * cartState.taxRate;
+    const total = Math.max(0, taxableAmount + shipping);
+
+    const subtotalEl = document.getElementById('summary-subtotal');
+    const shippingEl = document.getElementById('summary-shipping');
+    const taxEl = document.getElementById('summary-tax');
+    const totalEl = document.getElementById('summary-total');
+    const btnTotalEl = document.getElementById('btn-total-label');
+    const awayLabel = document.getElementById('shipping-away-label');
+    const shippingBar = document.getElementById('free-shipping-bar');
+
+    if (subtotalEl) subtotalEl.textContent = '$' + subtotal.toFixed(2);
+    if (shippingEl) shippingEl.textContent = isFreeShipping ? 'FREE' : '$' + shipping.toFixed(2);
+    if (taxEl) taxEl.textContent = '$' + tax.toFixed(2);
+    if (totalEl) totalEl.textContent = '$' + total.toFixed(2);
+    if (btnTotalEl) btnTotalEl.textContent = '$' + total.toFixed(2);
+
+    const remaining = Math.max(0, cartState.shippingThreshold - subtotal);
+    if (awayLabel) {
+      awayLabel.textContent = remaining > 0 ? `Add $${remaining.toFixed(2)}` : 'Unlocked';
+    }
+    if (shippingBar) {
+      const percentage = Math.min(100, Math.round((subtotal / cartState.shippingThreshold) * 100));
+      shippingBar.style.width = percentage + '%';
+    }
+  }
+
+  function updateQty(id, delta, price) {
+    if (!cartState.items[id]) return;
+    const newQty = cartState.items[id].qty + delta;
+    if (newQty >= 1) {
+      cartState.items[id].qty = newQty;
+      const display = document.getElementById(id);
+      if (display) display.textContent = newQty;
+      updateTotals();
+    }
+  }
+
+  function removeItem(cardId, price) {
+    const card = document.getElementById(cardId);
+    if (card) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(-8px) scale(0.97)';
+      setTimeout(() => {
+        card.remove();
+        if (cardId === 'cart-item-1') delete cartState.items['qty-1'];
+        if (cardId === 'cart-item-2') delete cartState.items['qty-2'];
+        updateTotals();
+      }, 250);
+    }
+  }
+
+  function applyPromo() {
+    const input = document.getElementById('promo-input');
+    const feedback = document.getElementById('promo-feedback');
+    if (input && feedback) {
+      const val = input.value.trim().toUpperCase();
+      if (val === 'ARCHITECT' || val === 'EDITION20') {
+        cartState.discount = 20.00;
+        feedback.classList.remove('hidden');
+        input.disabled = true;
+        updateTotals();
+      } else {
+        alert('Please enter a valid code (e.g. ARCHITECT)');
+      }
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(25,28,29,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-2"><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">storefront</span><span class="text-[11px] font-label tracking-tight">Shop</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="catalog" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">explore</span><span class="text-[11px] font-label tracking-tight">Catalog</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-12 transition-colors group text-primary font-semibold" data-path="bag" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">local_mall</span><span class="text-[11px] font-label tracking-tight">Bag</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">bookmarks</span><span class="text-[11px] font-label tracking-tight">Wishlist</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant transition-colors group" data-path="account" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-active:scale-95">account_circle</span><span class="text-[11px] font-label tracking-tight">Profile</span></a></div></nav></body></html>

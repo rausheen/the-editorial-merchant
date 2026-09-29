@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login &amp; Sign Up | The Editorial Merchant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#191c1d",
+              "tertiary-fixed": "#ffdcc0",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#bfc8cc",
+              "surface-dim": "#d9dadb",
+              "surface-container": "#edeeef",
+              "surface-variant": "#e1e3e4",
+              "tertiary-fixed-dim": "#fcb97c",
+              "on-tertiary-fixed": "#2d1600",
+              "on-tertiary-fixed-variant": "#693c08",
+              "on-primary-fixed-variant": "#004e61",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#394951",
+              "secondary-container": "#d4e5ef",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-container": "#784815",
+              "outline": "#70787d",
+              "background": "#f8f9fa",
+              "surface-container-highest": "#e1e3e4",
+              "surface-tint": "#19667d",
+              "secondary-fixed": "#d4e5ef",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#b8c9d2",
+              "on-secondary": "#ffffff",
+              "tertiary": "#5c3200",
+              "on-primary-fixed": "#001f28",
+              "inverse-primary": "#8dd0e9",
+              "surface-container-high": "#e7e8e9",
+              "inverse-surface": "#2e3132",
+              "primary-container": "#005b71",
+              "on-surface": "#191c1d",
+              "on-primary-container": "#8ed1ea",
+              "primary": "#004253",
+              "on-secondary-fixed": "#0e1e24",
+              "error": "#ba1a1a",
+              "surface": "#f8f9fa",
+              "on-tertiary-container": "#fdba7d",
+              "secondary": "#516169",
+              "on-surface-variant": "#40484c",
+              "on-secondary-container": "#57676f",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#b7eaff",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#8dd0e9",
+              "surface-container-low": "#f3f4f5",
+              "surface-bright": "#f8f9fa"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #004253 0%, #005b71 100%);
+        }
+        .glass-header {
+            background: rgba(248, 249, 250, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        input:focus {
+            outline: none;
+            border-bottom-color: #004253 !important;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface overflow-x-hidden">
+<!-- Auth Shell Suppression: TopNavBar and BottomNavBar are hidden for Transactional Flow -->
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Side: Editorial Lifestyle Imagery (60% Width on Desktop) -->
+<section class="hidden md:flex md:w-[60%] lg:w-[65%] relative overflow-hidden bg-surface-dim">
+<div class="absolute inset-0 z-10 bg-gradient-to-r from-transparent to-surface/20"></div>
+<img alt="High-end editorial fashion shot" class="absolute inset-0 w-full h-full object-cover" data-alt="Minimalist high-fashion editorial shot of a woman in neutral tones standing in a bright sunlit architectural space with long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYU3CZP8iBBAoKAADPiG7uQvnB18-ErgFUUFQdyCCoYz6joSO-ar6EuFFLWjEy8EeUN2loLYEO2TOynQTAwyrq8PLs9MEjqLQ6gl20OPJpWQWMY4ubb9ZUt1bdwEfihNt3lpjjSUwxKzsZqFcoJpuGkKy95zO38L5x5cVaO0Mt847d-Wn7pLp9WzHCr7SvWkZkBOsOCeskk4j5wB8btzxw9NH0DkoU5bIAd94L-7z-YmV4tBWhtvatB97R-elpoiMxmVua9NImjom5"/>
+<div class="relative z-20 mt-auto p-16 max-w-2xl">
+<div class="mb-6">
+<span class="text-on-primary-fixed-variant font-headline font-bold tracking-widest text-xs uppercase">The Collection 2024</span>
+</div>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold text-on-surface tracking-tighter leading-[0.9] mb-8">
+                    Curated For <br/>The Modern <br/>Minimalist.
+                </h1>
+<p class="text-on-surface-variant text-lg font-body max-w-md leading-relaxed">
+                    Experience a sanctuary of design. Access exclusive curations and archival pieces from the world's most intentional designers.
+                </p>
+</div>
+</section>
+<!-- Right Side: Auth Portal (40% Width on Desktop) -->
+<section class="w-full md:w-[40%] lg:w-[35%] bg-surface flex flex-col items-center justify-center p-8 md:p-12 lg:p-16">
+<!-- Brand Anchor -->
+<div class="w-full max-w-md mb-12">
+<div class="text-2xl font-headline font-bold tracking-tighter text-primary">
+                    The Editorial Merchant
+                </div>
+</div>
+<div class="w-full max-w-md">
+<!-- Tab Navigation -->
+<nav class="flex gap-8 mb-10">
+<button class="font-headline text-sm font-bold tracking-tight text-primary border-b-2 border-primary pb-2 transition-all">
+                        Login
+                    </button>
+<button class="font-headline text-sm font-medium tracking-tight text-outline hover:text-on-surface pb-2 transition-all">
+                        Create Account
+                    </button>
+</nav>
+<!-- Form Heading -->
+<div class="mb-8">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-2">Welcome Back</h2>
+<p class="text-on-surface-variant text-sm">Please enter your details to access your curation.</p>
+</div>
+<!-- Form Fields -->
+<form class="space-y-6">
+<div class="group">
+<label class="block text-[10px] uppercase tracking-widest font-bold text-outline-variant group-focus-within:text-primary mb-1 transition-colors" for="email">
+                            Email Address
+                        </label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface placeholder:text-surface-dim focus:ring-0 transition-all" id="email" name="email" placeholder="curator@editorial.com" type="email"/>
+</div>
+<div class="group">
+<div class="flex justify-between items-end mb-1">
+<label class="block text-[10px] uppercase tracking-widest font-bold text-outline-variant group-focus-within:text-primary transition-colors" for="password">
+                                Password
+                            </label>
+<a class="text-[10px] font-bold text-primary hover:opacity-70 transition-opacity" href="#">Forgot Password?</a>
+</div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface placeholder:text-surface-dim focus:ring-0 transition-all" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex items-center space-x-3 py-2">
+<div class="relative flex items-center">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 bg-transparent" id="remember" type="checkbox"/>
+</div>
+<label class="text-xs font-medium text-on-surface-variant cursor-pointer" for="remember">Keep me logged in</label>
+</div>
+<button class="w-full btn-gradient text-white font-headline font-bold py-4 rounded-lg shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" type="submit">
+                        Sign In to Dashboard
+                    </button>
+</form>
+<!-- Divider -->
+<div class="relative my-10 flex items-center">
+<div class="flex-grow border-t border-outline-variant/20"></div>
+<span class="flex-shrink mx-4 text-[10px] uppercase tracking-[0.2em] font-bold text-outline-variant">OR CONTINUE WITH</span>
+<div class="flex-grow border-t border-outline-variant/20"></div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container-low border border-outline-variant/10 hover:bg-surface-container transition-colors group">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-xs font-bold text-on-surface group-hover:text-primary transition-colors">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container-low border border-outline-variant/10 hover:bg-surface-container transition-colors group">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.06-.46-2.09-.48-3.19 0-.91.4-2.1.59-3.11-.42-4.14-4.22-3.54-10.74.87-11.02 1.14-.04 2.05.62 2.76.62.7 0 1.83-.79 3.19-.66 1.4.14 2.45.65 3.1 1.57-2.84 1.71-2.39 5.76.56 6.96-.58 1.48-1.35 2.92-2.1 3.55zm-3.03-14.89c.58-.72.98-1.72.87-2.72-.88.04-1.94.59-2.58 1.34-.57.65-.99 1.69-.87 2.65.98.08 1.99-.54 2.58-1.27z"></path>
+</svg>
+<span class="text-xs font-bold text-on-surface group-hover:text-primary transition-colors">Apple</span>
+</button>
+</div>
+<!-- Footer Text -->
+<div class="mt-12 text-center">
+<p class="text-[10px] text-outline tracking-wider font-medium uppercase">
+                        By signing in, you agree to our 
+                        <a class="text-primary hover:underline underline-offset-4" href="#">Terms of Service</a> &amp; 
+                        <a class="text-primary hover:underline underline-offset-4" href="#">Privacy Policy</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal/Toast Placeholder (Invisible unless triggered) -->
+<div class="fixed bottom-8 right-8 pointer-events-none opacity-0 transform translate-y-4 transition-all duration-300" id="auth-feedback">
+<div class="bg-surface-container-highest shadow-xl rounded-xl p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<p class="text-sm font-bold text-primary">Authenticating your curator session...</p>
+</div>
+</div>
+</body></html>
